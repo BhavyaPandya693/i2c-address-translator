@@ -5,6 +5,6 @@ The FPGA-based I²C Address Translator sits between an upstream I²C master and 
 
 ---
 
-## Block Diagram (ASCII)
+## Block Diagram 
 
 ![Untitled Diagram(1)](https://github.com/user-attachments/assets/94833e20-32fa-4126-ac35-7c4116664971)
