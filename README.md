@@ -28,7 +28,6 @@ Many I²C sensors share the same default 7-bit address (for example, 0x48). If t
 
 i2c-address-translator/\
 ├─ README.md\
-├─ LICENSE (MIT)\
 ├─ docs/\
 │  ├─ ARCHITECTURE.md\
 │  ├─ FSM.md\
