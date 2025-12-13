@@ -216,3 +216,5 @@ Possible extensions include:
    Medium,
    https://medium.com/@singhkashish170203/i2c-controller-using-verilog-bf7f77e9e861
 
+6. Nexperia, *AN90044 – I²C Bus Address Translation and Multiplexing*,
+   https://assets.nexperia.com/documents/application-note/AN90044.pdf
