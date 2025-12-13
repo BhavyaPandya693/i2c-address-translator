@@ -21,7 +21,7 @@ module i2c_addr_translator #(
   output reg [7:0]up_rd_data,
   output reg up_busy,
   output reg up_done,
-  output reg up_ACK_error,
+  output reg up_ack_error,
 
   //downstream 
   output reg dn_start,
@@ -32,7 +32,7 @@ module i2c_addr_translator #(
   input  wire [7:0]dn_rd_data,
   input dn_busy,
   input dn_done,
-  input dn_ACK_error
+  input dn_ack_error
 );
 
 // address mapping logical to physical
@@ -127,13 +127,13 @@ if the upstram address is equal to one of the logical addresses we map the mappi
     if (!rst_n) begin
       up_busy <= 1'b0;
       up_done <= 1'b0;
-      up_ACK_error <= 1'b0;
+      up_ack_error <= 1'b0;
       up_rd_data <= 8'd0;
       dn_addr <= 7'd0;
       dn_rw <= 1'b0;dn_wr_data<= 8'd0;
     end else begin
       up_done <= 1'b0;
-      up_ACK_error <= 1'b0;
+      up_ack_error <= 1'b0;
 
       case (state)
         ST_IDLE: begin
@@ -156,7 +156,7 @@ if the upstram address is equal to one of the logical addresses we map the mappi
           up_busy <= 1'b1;
           if (dn_done) begin
             up_rd_data <= dn_rd_data;
-            up_ACK_error <= dn_ACK_error;
+            up_ack_error <= dn_ack_error;
           end
         end
 
