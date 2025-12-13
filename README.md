@@ -36,15 +36,12 @@ i2c-address-translator/\
 │  ├─ FPGA_BUILD.md\
 │  └─ DESIGN_CHALLENGES.md\
 ├─ rtl/\
-│  ├─ i2c_address_translator.v    <-- top module\
-│  ├─ slave_fsm.v\
-│  ├─ master_fsm.v\
-│  ├─ i2c_bitbang_master.v        <-- downstream master engine\
-│  └─ i2c_slave_core.v\
+│  ├─ i2c_addr_translator.v    <-- top module\
+│  ├─ i2c_slave.v\
+│  ├─ i2c_master.v\
+│  └─ i2c_top_module.v\
 ├─ tb/\
-│  ├─ tb_top.v\
-│  ├─ tb_master_model.v\
-│  └─ tb_slave_models.v\
+│  ├─ tb_i2c_top_module.v\
 ├─ sim/                            <-- EDA Playground project files\
 │  └─ eda_playground_project.txt\
 └─ report/\
